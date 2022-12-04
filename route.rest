@@ -1,0 +1,50 @@
+GET http://localhost:3000/user
+###
+
+POST http://localhost:3000/user/testing
+Content-Type: application/json
+
+{
+    "username":"newuser8",
+    "password":"nonhashingpasswordfornow"
+}
+
+### 
+
+POST http://localhost:3000/user/newuser
+Content-Type: application/json
+
+{
+    "username":"A",
+    "password": "a"
+}
+
+###
+GET http://localhost:3000/user/username/Admi
+
+###
+PATCH http://localhost:3000/user/username/Admin
+Content-Type: application/json
+
+  {
+    "displayname": "Luke Mai is What",
+    "password":"nonhashingpassword",
+    "friendlist": [
+      "63354863969bd6693d894eb4"
+    ],
+    "grouplist": [],
+    "_id": "63354863969bd6693d894eb4",
+    "username": "Admin"
+  }
+
+###
+DELETE http://localhost:3000/user/username/newuser7
+
+###
+GET http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "username":"Admi",
+    "password": "a"
+}
